@@ -15,6 +15,7 @@ case "$cmd" in
   target)   source "$TVF_ROOT/commands/connect.sh"; tvf_target_show "$@" ;;
   clean)    source "$TVF_ROOT/commands/clean.sh";   tvf_clean "$@" ;;
   stream)   source "$TVF_ROOT/commands/stream.sh";  tvf_stream "$@" ;;
+  cast)     source "$TVF_ROOT/commands/cast.sh";    tvf_cast "$@" ;;
   apps)     source "$TVF_ROOT/commands/apps.sh";    tvf_apps "$@" ;;
   fun)      source "$TVF_ROOT/commands/fun.sh";     tvf_fun "$@" ;;
   new)      source "$TVF_ROOT/commands/new.sh";     tvf_new "$@" ;;

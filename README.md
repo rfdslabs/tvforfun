@@ -170,7 +170,8 @@ tvforfun apps uninstall <name>
 
 tvforfun stream mic [idx]             PC microphone → TV speakers   (idx 0=external, 1=MacBook)
 tvforfun stream cam [idx]             PC webcam → TV screen         (idx 0=external, 2=MacBook)
-tvforfun stream screen                PC screen → TV
+tvforfun stream screen                PC screen → TV (video only)
+tvforfun cast [--no-audio]            PC screen + system audio → TV (poor-man's Chromecast)
 
 tvforfun fun games                    mini-games (Math, Words, Colors)
 tvforfun fun karaoke <mp3> <lrc> [mic_idx]   synced lyrics + your mic
@@ -192,6 +193,22 @@ The TV app is the **server** (opens a TCP port); `ffmpeg` on your PC connects as
 - **cam / screen** — MJPEG over TCP; the app decodes each JPEG frame and draws it fullscreen.
 
 No cloud, no accounts — just your LAN.
+
+### Cast (screen + audio)
+
+`tvforfun cast` mirrors your **screen and system audio** to the TV at once — a
+poor-man's Chromecast. macOS can't capture system audio on its own, so for **sound**
+you need a loopback device:
+
+```bash
+brew install blackhole-2ch
+# Audio MIDI Setup → create a "Multi-Output Device" = BlackHole 2ch + your speakers,
+# set it as the Mac's output, then:
+./tvforfun cast
+```
+
+Without a loopback it falls back to **video only** (and prints these steps). Screen
+capture may prompt for macOS Screen Recording permission the first time.
 
 ## Karaoke
 

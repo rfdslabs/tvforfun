@@ -72,6 +72,7 @@ ${C_B}TvForFun${C_RESET} — kit de CLI pra Fire TV / Android TV (ADB na Wi-Fi)
   ${C_B}tvforfun target${C_RESET}            mostra a TV conectada
   ${C_B}tvforfun clean${C_RESET} <sub>       debloat / DNS / backup / restore
   ${C_B}tvforfun stream${C_RESET} <mic|cam|screen>   manda áudio/vídeo/tela do PC pra TV
+  ${C_B}tvforfun cast${C_RESET}                 espelha a tela do PC na TV COM áudio
   ${C_B}tvforfun apps${C_RESET} <list|install> catálogo de apps úteis
   ${C_B}tvforfun fun${C_RESET} <games|karaoke>  brincadeiras
   ${C_B}tvforfun new${C_RESET} <nome>        cria um app de TV novo (scaffold)
