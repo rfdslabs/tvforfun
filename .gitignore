@@ -1,0 +1,15 @@
+# build output (APKs, dex, intermediate)
+**/build/
+*.apk
+*.apk.idsig
+*.dex
+
+# signing keys — never commit
+*.keystore
+*.jks
+
+# per-user state lives in ~/.tvforfun, but ignore any local copy too
+.tvforfun/
+
+# macOS
+.DS_Store

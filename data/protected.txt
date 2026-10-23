@@ -1,0 +1,31 @@
+# NUNCA desabilitar — pacotes que podem tijolar a TV. (padrões, match por prefixo exato de token)
+# O debloat recusa qualquer pacote que bata com um destes.
+android
+com.android.systemui
+com.android.shell
+com.android.phone
+com.android.settings
+com.android.tv.settings
+com.android.permissioncontroller
+com.android.packageinstaller
+com.android.providers.settings
+com.android.providers.media
+com.android.providers.downloads
+com.android.providers.telephony
+com.android.keychain
+com.android.externalstorage
+com.android.mtp
+com.android.inputmethod
+com.google.android.gms
+com.google.android.gsf
+com.google.android.tvlauncher
+com.google.android.katniss
+com.google.android.backdrop
+com.google.android.tungsten.setupwraith
+# Fire TV essenciais
+com.amazon.tv.launcher
+com.amazon.device.sale.service
+com.amazon.tv.settings
+com.amazon.tv.ottssocompanion
+com.mediatek.tvinput
+com.amazon.vizzini

@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# TvForFun — kit de linha de comando pra Fire TV / Android TV (via ADB na Wi-Fi).
+# Para gente técnica. Aponta pra uma TV e: limpa, instala apps, faz stream, brinca.
+set -euo pipefail
+
+TVF_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export TVF_ROOT
+# shellcheck source=lib/common.sh
+source "$TVF_ROOT/lib/common.sh"
+
+cmd="${1:-help}"; shift || true
+
+case "$cmd" in
+  connect)  source "$TVF_ROOT/commands/connect.sh"; tvf_connect "$@" ;;
+  target)   source "$TVF_ROOT/commands/connect.sh"; tvf_target_show "$@" ;;
+  clean)    source "$TVF_ROOT/commands/clean.sh";   tvf_clean "$@" ;;
+  stream)   source "$TVF_ROOT/commands/stream.sh";  tvf_stream "$@" ;;
+  apps)     source "$TVF_ROOT/commands/apps.sh";    tvf_apps "$@" ;;
+  fun)      source "$TVF_ROOT/commands/fun.sh";     tvf_fun "$@" ;;
+  new)      source "$TVF_ROOT/commands/new.sh";     tvf_new "$@" ;;
+  build)    source "$TVF_ROOT/lib/build.sh";        tvf_build "$@" ;;
+  help|-h|--help|"") tvf_help ;;
+  *) tvf_err "comando desconhecido: $cmd"; tvf_help; exit 1 ;;
+esac

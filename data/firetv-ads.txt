@@ -1,0 +1,31 @@
+# Fire TV — pacotes de anúncio/telemetria/rastreio seguros de desabilitar (pm disable-user).
+# Nada é desinstalado; tudo reversível. Comente uma linha pra manter o pacote.
+# Base: Fire OS 7 (Android 9). Pacotes ausentes são ignorados.
+
+# Rastreio / telemetria / ID de publicidade
+com.amazon.tv.acr
+com.amazon.tv.fw.metrics
+com.amazon.neo.minerva
+com.amazon.neo.minerva.logcat
+com.amazon.wirelessmetrics.service
+com.amazon.perfcollection
+com.amazon.perfc
+com.amazon.dp.logger
+com.amazon.hybridadidservice
+
+# Anúncios / loja / demo / tutoriais
+com.amazon.sneakpeek
+com.amazon.tv.democontent.provider
+com.amazon.shoptv.client
+com.amazon.shoptv.firetv.client
+com.amazon.storm.lightning.tutorial
+com.amazon.tmm.tutorial
+
+# Extras da Alexa (núcleo da Alexa fica)
+com.amazon.tv.alexaalerts
+com.amazon.tv.alexanotifications
+com.amazon.audiohome
+
+# Protetor de tela / ambiente
+com.amazon.tv.ftvambient
+com.amazon.ftv.screensaver
