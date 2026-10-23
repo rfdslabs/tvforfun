@@ -55,7 +55,16 @@ tvf_adb() {
 # shellcheck source=lib/adb.sh
 source "$TVF_ROOT/lib/adb.sh"
 
+tvf_banner() {
+  if [ -t 1 ] && [ -f "$TVF_ROOT/lib/banner.txt" ]; then
+    printf '\n'; cat "$TVF_ROOT/lib/banner.txt"; printf '\n'
+  else
+    printf '\n%sTvForFun%s — Fire TV / Android TV CLI kit\n\n' "$C_B" "$C_RESET"
+  fi
+}
+
 tvf_help() {
+  tvf_banner
   cat <<EOF
 ${C_B}TvForFun${C_RESET} — kit de CLI pra Fire TV / Android TV (ADB na Wi-Fi)
 

@@ -1,6 +1,8 @@
 <div align="center">
 
-# 📺 TvForFun
+<img src="docs/banner.png" alt="TvForFun — Fire TV / Android TV CLI kit" width="820">
+
+<br><br>
 
 **A hacker's command-line kit for your Fire TV / Android TV.**
 
@@ -10,6 +12,11 @@ over ADB, no Play Store, no root.
 
 Compiles native Android TV apps **without Gradle** (just `aapt` + `d8` + `apksigner`) and
 pushes them over ADB in one command.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Platform: Fire TV / Android TV](https://img.shields.io/badge/platform-Fire%20TV%20%2F%20Android%20TV-blue.svg)](#supported-tvs)
+[![Shell](https://img.shields.io/badge/built%20with-bash%20%2B%20adb-1f2430.svg)](#)
+[![No Gradle](https://img.shields.io/badge/build-no%20gradle-ff4fa3.svg)](#build-your-own-tv-app)
 
 </div>
 
